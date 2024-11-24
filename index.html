@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Salario</h1>
+        <div id="tabs">
+            <input type="radio" name="tabs" id="tabone" checked>
+            <label for="tabone">Jornadas</label>
+            <div id="tab-content1">
+                <h2>Jornadas Laborales</h2>
+                <div class="input-group">
+                    <label for="horasSemana">Horas de la semana:</label>
+                    <div class="semana-input">
+                        <input type="number" id="horasSemana" min="0" placeholder="Horas">
+                        <input type="number" id="minutosSemana" min="0" max="59" placeholder="Minutos">
+                        <input type="number" id="segundosSemana" min="0" max="59" placeholder="Segundos">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="horasSabado">Horas del sábado:</label>
+                    <div class="sabado-input">
+                        <input type="number" id="horasSabado" min="0" placeholder="Horas">
+                        <input type="number" id="minutosSabado" min="0" max="59" placeholder="Minutos">
+                        <input type="number" id="segundosSabado" min="0" max="59" placeholder="Segundos">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="horasFerias">Horas de feriados:</label>
+                    <div class="feriado-input">
+                        <input type="number" id="horasFerias" min="0" placeholder="Horas">
+                        <input type="number" id="minutosFerias" min="0" max="59" placeholder="Minutos">
+                        <input type="number" id="segundosFerias" min="0" max="59" placeholder="Segundos">
+                    </div>
+                </div>
+                <button id="calcularJornadas">Calcular</button>
+                <div id="resultadoJornadas">
+                    <p id="salarioJornadas"></p>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo">Comisiones</label>
+            <div id="tab-content2">
+                <h2>Comisiones</h2>
+                <div class="input-group">
+                    <label for="horasExigidasMes">Horas exigidas por mes:</label>
+                    <input type="number" id="horasExigidasMes" min="0" placeholder="Horas exigidas">
+                </div>
+                <div class="input-group">
+                    <label for="horasTrabajadasMes">Horas trabajadas este mes:</label>
+                    <input type="number" id="horasTrabajadasMes" min="0" placeholder="Horas trabajadas">
+                </div>
+                <div class="input-group">
+                    <label for="gestionesTotalesMes">Gestiones totales este mes:</label>
+                    <input type="number" id="gestionesTotalesMes" min="0" placeholder="Gestiones totales">
+                </div>
+                <div class="input-group">
+                    <label for="recuperoTotal">Recupero Total (ARS):</label>
+                    <input type="number" id="recuperoTotal" min="0">
+                </div>
+                <button id="calcularComisiones">Calcular</button>
+                <div id="resultadoComisiones">
+                    <p id="porcentajeAdherencia"></p>
+                    <p id="gestionesPorHoraResultado"></p>
+                    <p id="comisionAdherenciaResultado"></p>
+                    <p id="comisionGestionesResultado"></p>
+                    <p id="comisionRecuperoResultado"></p>
+                </div>
+            </div>
+        </div>
+        <div id="resumenComisiones">
+            <h2>Resumen de Comisiones</h2>
+            <p id="comisionAdherenciaTotal"></p>
+            <p id="comisionGestionesTotal"></p>
+            <p id="comisionRecuperoTotal"></p>
+            <p id="totalComisiones"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
